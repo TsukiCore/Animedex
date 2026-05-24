@@ -1,0 +1,76 @@
+.section { margin-bottom: 52px; }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.titleWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.titleAccent {
+  width: 3px;
+  height: 20px;
+  background: linear-gradient(to bottom, var(--accent), var(--purple));
+  border-radius: 99px;
+  box-shadow: 0 0 8px var(--accent-glow);
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 14px;
+  letter-spacing: 0.12em;
+}
+
+.viewAll {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-3);
+  letter-spacing: 0.05em;
+  transition: color var(--t-fast);
+}
+.viewAll:hover { color: var(--accent); }
+
+/* ── Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+/* ── Skeleton ── */
+.skeletonCard {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+.skeletonPoster {
+  aspect-ratio: 2/3;
+  width: 100%;
+}
+
+.skeletonInfo {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skeletonTitle { height: 12px; width: 80%; border-radius: 99px; }
+.skeletonMeta  { height: 10px; width: 50%; border-radius: 99px; }
+
+@media (max-width: 640px) {
+  .grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 12px; }
+}
